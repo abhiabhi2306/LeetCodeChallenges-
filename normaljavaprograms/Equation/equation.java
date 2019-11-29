@@ -26,13 +26,14 @@ public class equation {
 			{
 			   System.out.println("Please input N: ");
 			   int n=choice=sc.nextInt();
-               int series=0,sum=0,i=0;
-               while (i<n)
+               int sum=0,i=0,j=0;
+              
+               for (i=1;i<=n;i++)
                {
-               	series=series+i;
-               	i++;
-               	sum=sum+series;
-
+               	for (j=1;j<=i;j++)
+               	{
+               		sum=sum+j;
+               	}
                }
                System.out.println("The sum is "+sum);
 
@@ -49,10 +50,13 @@ public class equation {
 			    System.out.println("Please input A : ");
 			    int a=choice=sc.nextInt();
 			    double sum=0;
+			    int powe=0;
 			    int factorial=0,i=0;
 			    while (i<n)
 			    {
-			       sum=sum+(Math.pow(a,i)/factorial(i));
+
+                   powe = (int) Math.pow(a,i);
+			       sum=sum+(powe/factorial(i));
 			       i=i+1;
 			    }
 
